@@ -6,7 +6,7 @@ import users from "../assets/img/users-icon.png";
 import drop from "../assets/img/pin-drop.png";
 import colorSharp from "../assets/img/color-sharp.png";
 
-export const Skills = () => {
+export const Stats = () => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
