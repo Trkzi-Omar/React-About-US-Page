@@ -44,8 +44,24 @@ export const Contact = () => {
                 <Col md={6}>
                     <img src={contactImg} alt={'contact image'}/>
                 </Col>
-                <Col md={6}>
-                    <h2>Get in touch with us</h2>
+                <Col md={6} id={'connect-col'}>
+                    <h2><a href={'#connect-message'} >
+                        Get in touch with us
+                        <svg width="123" height="113" viewBox="0 0 123 113" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g id="Triangles">
+                                <g id="triangles-dark">
+                                    <path id="triangle-dark-1" opacity="1"
+                                          d="M58.0782 52.2772C59.3904 53.0509 59.3904 54.9491 58.0782 55.7228L28.7658 73.0064C27.4326 73.7925 25.75 72.8313 25.75 71.2836L25.75 36.7164C25.75 35.1687 27.4326 34.2075 28.7658 34.9936L58.0782 52.2772Z"/>
+                                    <path id="triangle-dark-2" opacity="1"
+                                          d="M71.0782 52.2772C72.3904 53.0509 72.3904 54.9491 71.0782 55.7228L41.7658 73.0064C40.4326 73.7925 38.75 72.8313 38.75 71.2836L38.75 36.7164C38.75 35.1687 40.4326 34.2075 41.7658 34.9936L71.0782 52.2772Z"/>
+                                </g>
+                                <g id="triangles-light">
+                                    <path id="triangle-light-1" opacity="1"
+                                          d="M58.0782 52.2772C59.3904 53.0509 59.3904 54.9491 58.0782 55.7228L28.7658 73.0064C27.4326 73.7925 25.75 72.8313 25.75 71.2836L25.75 36.7164C25.75 35.1687 27.4326 34.2075 28.7658 34.9936L58.0782 52.2772Z"/>
+                                </g>
+                            </g>
+                        </svg></a></h2>
                     <form onSubmit={handleSubmit}>
                         <Row>
                             <Col sm={6} className={"px-1"}>
@@ -65,7 +81,7 @@ export const Contact = () => {
                                        onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                             </Col>
                             <Col sm={6} className={"px-1"}>
-                                <textarea value={formDetails.message} placeholder={'Message'}
+                                <textarea value={formDetails.message} placeholder={'Message'} id={'connect-message'}
                                           onChange={(e) => onFormUpdate('message', e.target.value)}/>
                                 <button type={'submit'}><span>{buttonText}</span></button>
                             </Col>
