@@ -272,8 +272,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-weight: 700;
     letter-spacing: 0.8px;
     padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(100.21deg, rgb(35, 99, 126) -23.1%, rgb(255, 193, 7) 111.58%);
+    /*border: 1px solid rgba(255, 255, 255, 0.5);*/
     font-size: 20px;
     margin-bottom: 16px;
     display: inline-block;
@@ -581,7 +581,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button {
     font-weight: 700;
     color: #000;
-    background-color: #fff;
+    background-color: #efff;
     padding: 14px 48px;
     font-size: 18px;
     margin-top: 25px;
@@ -595,26 +595,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: relative;
 }
 
-.contact form button:hover {
-    color: #fff;
-}
-
 .contact form button::before {
     content: "";
-    background: #121212;
+    background: #10303d;
     width: 0;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.45s ease-in-out;
 }
 
 .contact form button:hover::before {
     width: 100%;
 }
 
+.contact form button:hover {
+    color: #fff;
+}
 /************ Footer Css ************/
 .footer {
     padding: 0 0 50px 0;
