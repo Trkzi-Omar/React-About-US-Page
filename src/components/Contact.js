@@ -52,17 +52,19 @@ export const Contact = () => {
                         animate={["visible"]}
                         variants={variants}
                     >
-                        <img src={contactImg} alt={'contact image'}/>
+                        <img src={contactImg}
+                             alt={'contact image'}/>
                     </motion.div>
                 </Col>
                 <Col md={6} id={'connect-col'}>
-                    <TrackVisibility>
-                        {({once=true, isVisible}) => isVisible ?
-                            <motion.div
+                    <TrackVisibility once={true} >
+                        {({isVisible}) => isVisible ?
+                            /*<motion.div
                                 initial={{x: 300}}
                                 animate={{x: 0}}
                                 transition={{ease: [0, 0.71, 0.2, 1.01], duration: 0.9}}
-                            >
+                            >*/
+                            <div className={'animate__animated animate__fadeInRight'}>
                                 <h2><a href={'#connect-message'}>
                                     Get in touch with us
                                     <svg width="123" height="113" viewBox="0 0 123 113" fill="none"
@@ -100,8 +102,11 @@ export const Contact = () => {
                                                    onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                                         </Col>
                                         <Col sm={6} className={"p x-1"}>
-                                <textarea value={formDetails.message} placeholder={'Message'} id={'connect-message'}
+                                <textarea style={{width:"100%"}} className={"p p x-1"} value={formDetails.message} placeholder={'Message'}
+                                          id={'connect-message'}
                                           onChange={(e) => onFormUpdate('message', e.target.value)}/>
+                                        </Col>
+                                        <Col sm={6} className={"p x-1"}>
                                             <button type={'submit'}><span>{buttonText}</span></button>
                                         </Col>
                                         {
@@ -112,7 +117,7 @@ export const Contact = () => {
                                         }
                                     </Row>
                                 </form>
-                                </motion.div> : ""
+                            </div>  /*</motion.div> */ : ""
                         }
                     </TrackVisibility>
                 </Col>

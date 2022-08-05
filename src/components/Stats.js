@@ -5,6 +5,7 @@ import shipments from "../assets/img/shipments-square.jpg";
 import users from "../assets/img/users-icon.png";
 import drop from "../assets/img/pin-drop.png";
 import colorSharp from "../assets/img/color-sharp.png";
+import TrackVisibility from "react-on-screen";
 
 export const Stats = () => {
     const responsive = {
@@ -28,27 +29,38 @@ export const Stats = () => {
     };
     return (
         <section className={"skill"} id={'skills'}>
-            <Container><Row><Col>
-                <div className={'skill-bx'}>
-                    <h2>Our stats</h2>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
-                    <Carousel responsive={responsive} infinite={true} className={"skill-slider"}>
-                        <div><img src={shipments} alt={'image-item'}/>
-                            <h2>14 285</h2>
-                            <h5>Shipments</h5></div>
-                        <div><img src={users} alt={'image-item'}/>
-                            <h2>176</h2>
-                            <h5>Users</h5></div>
-                        <div><img src={drop}  alt={'image-item'}/>
-                            <h2>112</h2>
-                            <h5>Drop Points</h5>
-                        </div>
-                    </Carousel>
-                </div>
-
-            </Col></Row></Container>
-            <img className={"background-image-left"} src={colorSharp}/>
-        </section>)
+            <TrackVisibility once={false} partialVisibility={true}>
+                {({isVisible}) =>
+                    <div className={isVisible ? "animate__animated animate__slow animate__fadeIn" : ""}>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div className={'skill-bx'}>
+                                    <h2>Our stats</h2>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna aliqua.
+                                    </p>
+                                    <Carousel responsive={responsive} infinite={true} className={"skill-slider"}>
+                                        <div className={'p-3'}><img style={{}} src={shipments} alt={'image-item'}/>
+                                            <h2>14 285</h2>
+                                            <h5>Shipments</h5></div>
+                                        <div className={'p-3'}><img style={{}} src={users} alt={'image-item'}/>
+                                            <h2>176</h2>
+                                            <h5>Users</h5></div>
+                                        <div className={'p-3'}><img style={{}} src={drop} alt={'image-item'}/>
+                                            <h2>112</h2>
+                                            <h5>Drop Points</h5>
+                                        </div>
+                                    </Carousel>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                    </div>
+                }
+            </TrackVisibility>
+            <div className={"background-image-left"}/>
+        </section>
+    )
 }
