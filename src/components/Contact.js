@@ -57,7 +57,7 @@ export const Contact = () => {
                     </motion.div>
                 </Col>
                 <Col md={6} id={'connect-col'}>
-                    <TrackVisibility once={true} >
+                    <TrackVisibility once={true}>
                         {({isVisible}) => isVisible ?
                             /*<motion.div
                                 initial={{x: 300}}
@@ -102,7 +102,8 @@ export const Contact = () => {
                                                    onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                                         </Col>
                                         <Col sm={6} className={"p x-1"}>
-                                <textarea style={{width:"100%"}} className={"p p x-1"} value={formDetails.message} placeholder={'Message'}
+                                <textarea style={{width: "100%"}} className={"p p x-1"} value={formDetails.message}
+                                          placeholder={'Message'}
                                           id={'connect-message'}
                                           onChange={(e) => onFormUpdate('message', e.target.value)}/>
                                         </Col>
@@ -117,7 +118,9 @@ export const Contact = () => {
                                         }
                                     </Row>
                                 </form>
-                            </div>  /*</motion.div> */ : ""
+                            </div>
+                            /*</motion.div> */
+                            : ""
                         }
                     </TrackVisibility>
                 </Col>

@@ -84,7 +84,8 @@ export const Banner = () => {
                                 volutpat commodo sed egestas egestas.
                             </p>
                             <button onClick={() => console.log('connect')}>
-                                Let's connect <ArrowRightCircle size={25}/>
+                                <a href={'#connect'}>
+                                Let's connect <ArrowRightCircle size={25}/></a>
                             </button>
                         </div>}
                     </TrackVisibility>
